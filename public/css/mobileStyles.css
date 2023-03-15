@@ -15,16 +15,19 @@
     text-align: center;
 }
 html{
+    width: 100vw;
+    height: 100vh;
     background-color: #57326b;
-    overflow: hidden;
-}
-#landing{
     background-image: url('../img/fondo1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#landing{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +35,6 @@ html{
 }
 #landing > img{
     height: 35vh;
-    margin-top: 5vh;
 }
 #icons{
     color: rgb(194, 194, 194);
