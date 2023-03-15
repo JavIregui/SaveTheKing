@@ -33,7 +33,7 @@ body{
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 10%;
+    top: 5%;
     color: white;
 }
 #landing > img{
