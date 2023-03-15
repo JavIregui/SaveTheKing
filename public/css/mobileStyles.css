@@ -1,0 +1,19 @@
+/* TIPOGRAFÍAS */
+@font-face {
+    font-family: texto;
+    src: url(../media/fonts/Insanibc.woff);
+}
+
+/* DOCUMENTO */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-family: 'texto';
+    text-align: center;
+}
+html{
+    background-color: #57326b;
+}
