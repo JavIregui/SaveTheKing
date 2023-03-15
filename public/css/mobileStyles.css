@@ -33,7 +33,23 @@ html{
 }
 #landing > img{
     height: 40%;
+}
+#icons{
+    color: rgb(194, 194, 194);
+    font-size: 36px;
     margin-bottom: 5%;
+}
+h1{
+    font-size: 24px;
+    margin-bottom: 2%;
+}
+#landing > h2{
+    font-size: 16px;
+    width: 80%;
+    color: rgb(194, 194, 194);
+}
+#landing > i{
+    font-size: 32px;
 }
 
 
