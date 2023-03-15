@@ -11,11 +11,14 @@ const deviceChecker = require('../controllers/deviceChecker')
 
 router.get('/', function(req, res){
     if(!req.useragent.isDesktop){
-        res.send('MOVIL')
+        res.redirect('/mobile')
     }
     else{
         res.send('DESKTOP')
     }
+});
+router.get('/mobile', function(req, res){
+    res.render('mobile')
 });
 
 // Rutas GET
