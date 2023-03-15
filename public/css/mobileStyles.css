@@ -51,14 +51,6 @@ h1{
     font-size: 5vh;
     margin: 1vh 0px;
 }
-/* CRÉDITOS */
-#info{
-    margin: 15px 25px;
-    color: white;
-}
-#info > h2{
-    font-size: 12px;
-}
 /* INSTAGRAM */
 #instaLink{
     position: absolute;
