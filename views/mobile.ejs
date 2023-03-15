@@ -13,8 +13,12 @@
 
         <meta name="description" content="Save the King Game disponible para PC y Mac">
 
-        <script>
-            screen.orientation.lock('portrait');
+        <script type="text/javascript">
+            function lockOrientation(){
+                screen.orientation.lock('portrait');
+            }
+            
+            window.onload = lockOrientation;
         </script>
     </head>
 
