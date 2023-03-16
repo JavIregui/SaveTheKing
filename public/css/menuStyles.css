@@ -1,0 +1,282 @@
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* -- GLOBAL -------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* TIPOGRAFÍAS */
+@font-face {
+    font-family: graf1;
+    src: url(../fonts/Empires.woff);
+}
+@font-face {
+    font-family: texto;
+    src: url(../fonts/Insanibc.woff);
+}
+@font-face {
+    font-family: graf2;
+    src: url(../fonts/JUICE___.woff);
+}
+
+/* DOCUMENTO */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-family: 'texto';
+    text-align: center;
+}
+html{
+    background-color: #57326b;
+    overflow: hidden;
+}
+
+/* SISTEMA DE MUTEADO */
+#mute{
+    font-size: 28px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 25px 50px;
+    color: white;
+    cursor: pointer;
+}
+
+#silence{
+    display: none;
+    transition: .2s;
+}
+#silence:hover{
+    font-size: 34px;
+}
+
+#sound{
+    transition: .2s;
+}
+#sound:hover{
+    font-size: 34px;;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* -- LANDING ------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* LOGO */
+#landing{
+    background-image: url('../media/img/fondo1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#landing > img{
+    height: 70%;
+    margin-top: -50px;
+    margin-bottom: -50px;
+}
+
+#jugar > img{
+    transition: .2s;
+    width: 250px;
+}
+#jugar > img:hover{
+    width: 350px;
+}
+
+/* CRÉDITOS */
+#info{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 25px;
+    color: white;
+}
+#info > h2{
+    margin-bottom: 5px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+#info:hover > h2{
+    font-size: 16px;
+}
+
+/* INSTAGRAM */
+#instaLink{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 25px 50px;
+    color: white;
+}
+#insta{
+    font-size: 32px;
+    color: white;
+    transition: .2s;
+}
+#insta:hover{
+    font-size: 48px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* -- LOBBY --------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* CONTENIDO */
+#lobby{
+    background-image: url('../media/img/fondo1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#logo{
+    height: 30%;
+}
+
+#scroll{
+    height: 50%;
+    width: 50%;
+    background-color: #1a1a1a7c;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+#buscar, #crear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #676767;
+    border: #cccbcb .75vh solid;
+    border-radius: 50px;
+    transition: .2s;
+    margin: 1vh 0vh;
+    height: 8.5vh;
+    width: 50%;
+    font-size: 3vh;
+}
+#buscar:hover, #crear:hover{
+    height: 10vh;
+    font-size: 3.5vh;
+    width: 55%;
+}
+
+#buscar{
+    color: #ef8216;
+}
+#crear{
+    color: #53e200;
+}
+
+#scroll > form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 1vh;
+}
+
+#roomCode{
+    color: #676767;
+    background-color: #cccbcb;
+    border: #676767 .75vh solid;
+    border-radius: 50px;
+    transition: .2s;
+    width: 50%;
+    height: 8.5vh;
+    font-size: 3vh;
+    cursor: text;
+    margin-right: 5%;
+    caret-color: #676767;
+}
+#roomCode::placeholder{
+    color: white;
+}
+#roomCode:hover{
+    height: 10vh;
+    font-size: 3.5vh;
+    width: 75%;
+}
+#roomCode:focus{
+    outline: none;
+    height: 10vh;
+    font-size: 3.5vh;
+    width: 75%;
+}
+#roomCode:focus::placeholder {
+    color: transparent;
+  }
+#roomCode:hover + #unirse, #roomCode:focus + #unirse {
+    font-size: 2.5vh;
+}
+
+#unirse{
+    color: #008bd8;
+    background-color: #676767;
+    border: #cccbcb .75vh solid;
+    border-radius: 50px;
+    transition: .2s;
+    width: 50%;
+    height: 9.5vh;
+    font-size: 3vh;
+    cursor: pointer;
+}
+#unirse:hover{
+    height: 11vh;
+    width: 75%;
+    font-size: 3.5vh;
+}
+#scroll > form:hover > #roomCode:not(:hover) {
+    font-size: 2.5vh;
+}
+#roomCode:focus + #unirse:hover{
+    font-size: 3.5vh;
+}
+
+/* BOTÓN ATRAS */
+#backLink{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px 50px;
+    color: white;
+}
+#back{
+    font-size: 32px;
+    color: white;
+    transition: .2s;
+}
+#back:hover{
+    font-size: 48px;
+}
+
+/* BOTÓN AYUDA */
+#helpLink{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 25px 50px;
+    color: white;
+}
+#help{
+    font-size: 32px;
+    color: white;
+    transition: .2s;
+}
+#help:hover{
+    font-size: 48px;
+}
