@@ -2,6 +2,7 @@
 @font-face {
     font-family: texto;
     src: url(../fonts/Insanibc.woff);
+    font-display: swap
 }
 
 /* DOCUMENTO */

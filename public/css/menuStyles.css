@@ -6,14 +6,17 @@
 @font-face {
     font-family: graf1;
     src: url(../fonts/Empires.woff);
+    font-display: swap
 }
 @font-face {
     font-family: texto;
     src: url(../fonts/Insanibc.woff);
+    font-display: swap
 }
 @font-face {
     font-family: graf2;
     src: url(../fonts/JUICE___.woff);
+    font-display: swap
 }
 
 /* DOCUMENTO */
