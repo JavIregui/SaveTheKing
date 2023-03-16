@@ -17,6 +17,9 @@ router.get('/', function(req, res){
         res.render('index')
     }
 });
+router.get('/lobby', function(req, res){
+    res.render('lobby')
+})
 router.get('/mobile', function(req, res){
     res.render('mobile')
 });
