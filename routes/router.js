@@ -14,7 +14,7 @@ router.get('/', function(req, res){
         res.redirect('/mobile')
     }
     else{
-        res.send('DESKTOP')
+        res.render('index')
     }
 });
 router.get('/mobile', function(req, res){
