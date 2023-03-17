@@ -2,6 +2,12 @@
 const express = require('express');
 const app = express();
 
+// Invocamos al compresor
+const compression = require('compression');
+app.use(compression());
+
+
+
 // Seteamos el motor de plantillas
 app.set('view engine', 'ejs');
 
