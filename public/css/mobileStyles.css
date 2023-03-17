@@ -64,3 +64,21 @@ h1{
     font-size: 32px;
     color: white;
 }
+
+@keyframes transition {
+    0%   {transform: translateX(0%)}
+    10%  {transform: translateX(0%)}
+    100% {transform: translateX(-100%)}
+}
+
+#transition{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+    animation-name: transition;
+    animation-duration: 1.5s;
+    transform: translateX(-100%);
+}
