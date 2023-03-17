@@ -67,10 +67,9 @@ h1{
 
 @keyframes transition {
     0%   {transform: translateX(0%)}
-    10%  {transform: translateX(0%)}
+    25%  {transform: translateX(0%)}
     100% {transform: translateX(-100%)}
 }
-
 #transition{
     position: absolute;
     width: 100vw;
@@ -79,6 +78,6 @@ h1{
     left: 0;
     background-color: white;
     animation-name: transition;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     transform: translateX(-100%);
 }
