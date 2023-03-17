@@ -78,6 +78,6 @@ h1{
     left: 0;
     background-color: white;
     animation-name: transition;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     transform: translateX(-100%);
 }
