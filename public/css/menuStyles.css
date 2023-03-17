@@ -60,21 +60,37 @@ html{
     font-size: 34px;;
 }
 
-@keyframes transition {
+@keyframes transitionLeft {
     0%   {transform: translateX(0%)}
     25%  {transform: translateX(0%)}
     100% {transform: translateX(-100%)}
 }
-#transition{
+@keyframes transitionRight {
+    0%   {transform: translateX(0%)}
+    25%  {transform: translateX(0%)}
+    100% {transform: translateX(100%)}
+}
+#indexTransition{
     position: absolute;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
     background-color: white;
-    animation-name: transition;
+    animation-name: transitionLeft;
     animation-duration: 1.5s;
     transform: translateX(-100%);
+}
+#lobbyTransition{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+    animation-name: transitionRight;
+    animation-duration: 1.5s;
+    transform: translateX(100%);
 }
 
 /* ------------------------------------------------------------------------------------------------------------------ */
