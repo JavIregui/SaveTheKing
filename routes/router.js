@@ -15,8 +15,8 @@ router.get('/', deviceChecker.checkDevice, (req, res) => {
 router.get('/lobby', deviceChecker.checkDevice, (req, res) => {
     res.render('lobby')
 })
-router.get('/mobile', deviceChecker.checkDevice, (req, res) => {
-    res.redirect('/')
+router.get('/mobile', (req, res) => {
+    res.render('mobile')
 });
 
 // Rutas POST
