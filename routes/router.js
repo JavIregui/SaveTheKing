@@ -7,13 +7,13 @@ const useragent = require('express-useragent');
 router.use(useragent.express());
 
 // Invocamos a los controladores
-const deviceChecker = require('../controllers/deviceChecker')
+const deviceController = require('../controllers/deviceController')
 const roomController = require('../controllers/roomController')
 
-router.get('/', deviceChecker.checkDevice, (req, res) => {
+router.get('/', deviceController.checkDevice, (req, res) => {
     res.render('index')
 });
-router.get('/lobby', deviceChecker.checkDevice, (req, res) => {
+router.get('/lobby', deviceController.checkDevice, (req, res) => {
     res.render('lobby')
 })
 router.get('/mobile', (req, res) => {

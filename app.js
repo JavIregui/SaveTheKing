@@ -24,7 +24,7 @@ dotenv.config({path:'./env/.env'})
 // Llamar al Router
 app.use('/', require('./routes/router'))
 
-// Confiar en Proxy
+// Confiar en Proxy para poder acceder a las IPs de los clientes
 app.set('trust proxy', true)
 
 // Iniciamos el servidor
