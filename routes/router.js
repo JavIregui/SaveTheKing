@@ -18,6 +18,9 @@ router.get('/lobby', deviceChecker.checkDevice, (req, res) => {
 router.get('/mobile', (req, res) => {
     res.render('mobile')
 });
+router.get('/sala', (req, res) => {
+    res.send(req.socket.remoteAddress)
+});
 
 // Rutas POST
 //router.post('/RUTA', FUNCIÓN)
