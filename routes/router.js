@@ -19,7 +19,7 @@ router.get('/mobile', (req, res) => {
     res.render('mobile')
 });
 router.get('/sala', (req, res) => {
-    res.send(req.socket.remoteAddress)
+    res.send(req.ip)
 });
 
 // Rutas POST

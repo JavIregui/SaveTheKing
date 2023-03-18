@@ -24,6 +24,9 @@ dotenv.config({path:'./env/.env'})
 // Llamar al Router
 app.use('/', require('./routes/router'))
 
+// Confiar en Proxy
+app.set('trust proxy', true)
+
 // Iniciamos el servidor
 app.listen(process.env.PORT, (req, res) => {
     console.log('SERVER RUNNING')
