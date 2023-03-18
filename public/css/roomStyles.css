@@ -1,0 +1,123 @@
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* -- GLOBAL -------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* TIPOGRAFÍAS */
+@font-face {
+    font-family: texto;
+    src: url(../fonts/Insanibc.woff);
+    font-display: swap
+}
+
+/* DOCUMENTO */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-family: 'texto';
+    text-align: center;
+}
+html{
+    background-color: #57326b;
+    overflow: hidden;
+}
+
+/* SISTEMA DE MUTEADO */
+#mute{
+    font-size: 28px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 25px 50px;
+    color: white;
+    cursor: pointer;
+}
+
+#silence{
+    display: none;
+    transition: .2s;
+}
+#silence:hover{
+    font-size: 34px;
+}
+
+#sound{
+    transition: .2s;
+}
+#sound:hover{
+    font-size: 34px;;
+}
+
+@keyframes transitionLeft {
+    0%   {transform: translateX(0%)}
+    25%  {transform: translateX(0%)}
+    100% {transform: translateX(-100%)}
+}
+@keyframes transitionRight {
+    0%   {transform: translateX(0%)}
+    25%  {transform: translateX(0%)}
+    100% {transform: translateX(100%)}
+}
+#cSalaTransition{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: white;
+    animation-name: transitionLeft;
+    animation-duration: 1.5s;
+    transform: translateX(-100%);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* -- CREAR SALA ---------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* CONTENIDO */
+#crearSala{
+    background-image: url('../img/fondo1.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#logo{
+    margin-top: 5vh;
+    height: 25%;
+}
+
+#scroll{
+    height: 60%;
+    width: 75%;
+    background-color: #1a1a1a7c;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+/* BOTÓN ATRAS */
+#backLink{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px 50px;
+    color: white;
+}
+#back{
+    font-size: 32px;
+    color: white;
+    transition: .2s;
+}
+#back:hover{
+    font-size: 48px;
+}
