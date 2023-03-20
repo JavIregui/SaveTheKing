@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <audio src="resources/audio/music.mp3" loop id="music"></audio>
     <audio src="resources/audio/hover.mp3" id="hoverSound"></audio>
     <audio src="resources/audio/spray.mp3" autoplay id="transitionAudio"></audio>
     <script>
@@ -50,11 +51,11 @@
         <img id="logo" src="resources/img/logoFinal.webp" alt="Logo Save The King">
 
         <div id="scroll">
-            <a id="buscar" href="/buscarSala">BUSCAR SALA</a>
-            <a id="crear" href="/crearSala">CREAR SALA</a>
+            <a id="buscar" onclick="saveMusic()" href="/buscarSala">BUSCAR SALA</a>
+            <a id="crear" onclick="saveMusic()" href="/crearSala">CREAR SALA</a>
             <form action="/joinRoom" method="POST">
                 <input type="text" id="roomCode" name="roomCode" placeholder="CÓDIGO">
-                <input type="submit" id="unirse" value="UNIRSE">
+                <input type="submit" onclick="saveMusic()" id="unirse" value="UNIRSE">
             </form> 
         </div>
     </div>
@@ -64,11 +65,11 @@
         <div id="silence" onclick="unmute()"><i class="fa-solid fa-volume-xmark"></i></div>
     </div>
 
-    <a id="backLink" href="/">
+    <a id="backLink" onclick="saveMusic()" href="/">
         <i id="back" class="fa-solid fa-arrow-left"></i>
     </a>
     
-    <a id="helpLink" href="/tutorial">
+    <a id="helpLink" onclick="saveMusic()" href="/tutorial">
         <i id="help" class="fa-solid fa-circle-question"></i>
     </a>
 

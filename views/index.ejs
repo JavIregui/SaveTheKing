@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <audio src="resources/audio/music.mp3" loop id="music"></audio>
     <audio src="resources/audio/hover.mp3" id="hoverSound"></audio>
     <audio src="resources/audio/spray.mp3" autoplay id="transitionAudio"></audio>
     <script>
@@ -49,7 +50,7 @@
     <div id="landing">
         <img src="resources/img/logoFinal.webp" alt="Logo Save The King">
 
-        <a id="jugar" href="/lobby"><img src="resources/img/playButton.webp" alt="Jugar"></a>
+        <a id="jugar" onclick="saveMusic()" href="/lobby"><img src="resources/img/playButton.webp" alt="Jugar"></a>
     </div>
     
     <div id="info">
