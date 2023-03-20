@@ -12,9 +12,40 @@
     <script src="https://kit.fontawesome.com/06ddcb88ee.js" crossorigin="anonymous"></script>
 
     <meta name="description" content="Save the King Game">
+
+    <script src="resources/js/soundController.js"></script>
 </head>
 
 <body>
+    <audio src="resources/audio/hover.mp3" id="hoverSound"></audio>
+    <audio src="resources/audio/spray.mp3" autoplay id="transitionAudio"></audio>
+    <script>
+        function checkMute(){
+            let name = "mute=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let cookieArray = decodedCookie.split(';');
+            for(let i = 0; i <cookieArray.length; i++) {
+            let c = cookieArray[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                cookieValue = c.substring(name.length, c.length);
+                return cookieValue;
+            }
+            }
+        }
+
+        var audio = document.getElementById("transitionAudio");
+
+        if(checkMute() == "true"){
+            audio.volume = 0;
+        }
+        else{
+            audio.volume = 0.2;
+        }
+    </script>
+
     <div id="lobby">
         <img id="logo" src="resources/img/logoFinal.webp" alt="Logo Save The King">
 
@@ -29,8 +60,8 @@
     </div>
     
     <div id="mute">
-        <a id="sound" onclick="someFunction()"><i class="fa-solid fa-volume-high"></i></a>
-        <a id="silence" onclick="someFunction()"><i class="fa-solid fa-volume-xmark"></i></a>
+        <div id="sound" onclick="mute()"><i class="fa-solid fa-volume-high"></i></div>
+        <div id="silence" onclick="unmute()"><i class="fa-solid fa-volume-xmark"></i></div>
     </div>
 
     <a id="backLink" href="/">

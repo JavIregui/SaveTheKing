@@ -11,14 +11,30 @@
     <link href="resources/css/roomStyles.css" type="text/css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/06ddcb88ee.js" crossorigin="anonymous"></script>
 
+    <script src="resources/js/carousel.js"></script>
+
     <meta name="description" content="Save the King Game">
 </head>
 
 <body>
+    <audio src="resources/audio/spray.mp3" autoplay id="transitionAudio"></audio>
+    
     <div id="crearSala">
         <img id="logo" src="resources/img/logoFinal.webp" alt="Logo Save The King">
 
-        <div id="scroll">
+        <div id="slider-wrapper">
+            <button class="slide-arrow" id="slide-arrow-prev">
+                &#8249;
+              </button>
+              <button class="slide-arrow" id="slide-arrow-next">
+                &#8250;
+              </button>
+              <ul class="slides-container" id="slides-container">
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+              </ul>
         </div>
     </div>
     
