@@ -111,6 +111,27 @@ window.onload = function() {
     music.play();
 
     // Sonidos de interacción
+        // Globales
+    if(back && muteBtn){
+        back.addEventListener('mouseover', function() {
+            if(getCookie() == "true"){
+                hoverSound.volume = 0;
+            }
+            else{
+                hoverSound.volume = 0.2;
+            }
+            hoverSound.play();
+        });
+        muteBtn.addEventListener('mouseover', function() {
+            if(getCookie() == "true"){
+                hoverSound.volume = 0;
+            }
+            else{
+                hoverSound.volume = 0.2;
+            }
+            hoverSound.play();
+        });
+    }
         // Landing
     if(insta && playBtn) {
         playBtn.addEventListener('mouseover', function() {
@@ -134,16 +155,7 @@ window.onload = function() {
         });
     }
         // Lobby
-    if(back && help && muteBtn && buscar && crear && code && join){
-        back.addEventListener('mouseover', function() {
-            if(getCookie() == "true"){
-                hoverSound.volume = 0;
-            }
-            else{
-                hoverSound.volume = 0.2;
-            }
-            hoverSound.play();
-        });
+    if(help && buscar && crear && code && join){
         help.addEventListener('mouseover', function() {
             if(getCookie() == "true"){
                 hoverSound.volume = 0;
@@ -152,15 +164,6 @@ window.onload = function() {
                 hoverSound.volume = 0.2;
             }
             hoverSound.play();
-            hoverSound.play();
-        });
-        muteBtn.addEventListener('mouseover', function() {
-            if(getCookie() == "true"){
-                hoverSound.volume = 0;
-            }
-            else{
-                hoverSound.volume = 0.2;
-            }
             hoverSound.play();
         });
         buscar.addEventListener('mouseover', function() {
