@@ -79,7 +79,6 @@ function getIcon(){
 
 // Al cargar encuentra todas las posibles intetracciones con sonido y les añade un EventListener
 window.onload = function() {
-    document.cookie = "interaction= false";
     document.addEventListener("click", function(){
         document.cookie = "interaction= true";
     })
