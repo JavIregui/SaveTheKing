@@ -31,5 +31,3 @@ app.set('trust proxy', true)
 app.listen(process.env.PORT, (req, res) => {
     console.log('SERVER RUNNING')
 })
-
-// CodeSpace Test
