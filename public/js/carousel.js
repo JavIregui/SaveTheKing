@@ -1,14 +1,12 @@
-const slidesContainer = document.getElementById("slides-container");
-const slide = document.querySelector(".slide");
-const prevButton = document.getElementById("slide-arrow-prev");
-const nextButton = document.getElementById("slide-arrow-next");
+const slides = document.getElementById("slides");
+const prevButton = document.getElementById("arrow-prev");
+const nextButton = document.getElementById("arrow-next");
+const slideWidth = slides.clientWidth;
 
 nextButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft += slideWidth;
+  slides.scrollLeft += slideWidth;    
 });
 
 prevButton.addEventListener("click", () => {
-  const slideWidth = slide.clientWidth;
-  slidesContainer.scrollLeft -= slideWidth;
+  slides.scrollLeft -= slideWidth;
 });

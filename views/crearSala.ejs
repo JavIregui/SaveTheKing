@@ -13,7 +13,7 @@
 
     <meta name="description" content="Save the King Game">
 
-    <script src="resources/js/carousel.js"></script>
+    
     <script src="resources/js/soundController.js"></script>
 </head>
 
@@ -51,21 +51,24 @@
     <div id="crearSala">
         <img id="logo" src="resources/img/logoFinal.webp" alt="Logo Save The King">
 
-        <div id="slider-wrapper">
-            <button class="slide-arrow" id="slide-arrow-prev">
-                &#8249;
-              </button>
-              <button class="slide-arrow" id="slide-arrow-next">
-                &#8250;
-              </button>
-              <ul class="slides-container" id="slides-container">
-                <li class="slide"></li>
-                <li class="slide"></li>
-                <li class="slide"></li>
-                <li class="slide"></li>
-              </ul>
+        <div id="slider">
+            <ul id="slides">
+                <li class="slide"><h1>1</h1></li>
+                <li class="slide"><h1>2</h1></li>
+                <li class="slide"><h1>3</h1></li>
+                <li class="slide"><h1>4</h1></li>
+            </ul>
         </div>
+
+        <button class="arrow" id="arrow-prev">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="arrow" id="arrow-next">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
     </div>
+
+    <script src="resources/js/carousel.js"></script>
     
     <div id="mute">
         <div id="sound" onclick="mute()"><i class="fa-solid fa-volume-high"></i></div>
