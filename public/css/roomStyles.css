@@ -108,7 +108,7 @@ html{
 #back:hover{
     font-size: 48px;
 }
-
+/* CAROUSEL */
 #slider{
     width: 60%;
     height: 60%;
@@ -129,18 +129,9 @@ html{
     border-radius: 25px;
     margin: 5% 5%;
     flex: 1 0 90%;
-}
-.slide:nth-child(1) {
-    background-color: #49b293;
-}
-.slide:nth-child(2) {
-    background-color: #b03532;
-}
-.slide:nth-child(3) {
-    background-color: #6a478f;
-}
-.slide:nth-child(4) {
-    background-color: #da6f2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .arrow {
     position: absolute;
@@ -175,3 +166,55 @@ html{
     right: 12%;
     padding-left: 25px;
 } 
+/* MAPAS */
+.desc{
+    color: white;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.desc > h2{
+    margin: 20px 0px;
+    font-size: 5vh;
+}
+.desc > p{
+    overflow: scroll;
+    height: 50%;
+    text-align: left;
+    font-size: 2.5vh;
+}
+.desc > a{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background-color: #676767;
+    border: #cccbcb .75vh solid;
+    border-radius: 50px;
+    transition: .2s;
+    font-size: 2.5vh;
+    padding: 10px 25px;
+}
+.desc > a:hover{
+    font-size: 3vh;
+}
+.slide > img{
+    object-fit: cover;
+    background-color: rgba(255, 255, 255, 0.272);
+    border-radius: 25px;
+    margin-left: 5%;
+    width: 35%;
+    height: 100%;
+}
+#slides > :nth-child(1) > .desc > a{
+    color: #008bd8;
+}
+#slides > :nth-child(2) > .desc > a{
+    color: #fdea18;
+}
+#slides > :nth-child(3) > .desc > a{
+    color: #53e200;
+}

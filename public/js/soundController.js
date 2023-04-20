@@ -96,6 +96,9 @@ window.onload = function() {
     const crear = document.getElementById("crear");
     const code = document.getElementById("roomCode");
     const join = document.getElementById("unirse");
+    const arrows = document.getElementsByClassName("arrow");
+    const selects = document.getElementsByClassName("select");
+
 
     // Cambia el icono de muteo al correcto
     if(muteBtn){
@@ -207,6 +210,33 @@ window.onload = function() {
             hoverSound.play();
             hoverSound.play();
         });
+    }
+        // SelectMap
+    if(arrows && selects){
+        for(i = 0; i < arrows.length; i++){
+            arrows[i].addEventListener('mouseover', function() {
+                if(getCookie() == "true"){
+                    hoverSound.volume = 0;
+                }
+                else{
+                    hoverSound.volume = 0.2;
+                }
+                hoverSound.play();
+                hoverSound.play();
+            });
+        }
+        for(i = 0; i < selects.length; i++){
+            selects[i].addEventListener('mouseover', function() {
+                if(getCookie() == "true"){
+                    hoverSound.volume = 0;
+                }
+                else{
+                    hoverSound.volume = 0.2;
+                }
+                hoverSound.play();
+                hoverSound.play();
+            });
+        }
     }
 }
 
