@@ -19,11 +19,17 @@ router.get('/lobby', deviceController.checkDevice, (req, res) => {
 router.get('/mobile', (req, res) => {
     res.render('mobile')
 });
-router.get('/buscarSala', (req, res) => {
+router.get('/buscarSala', deviceController.checkDevice, (req, res) => {
     res.send(req.ip)
 });
-router.get('/crearSala', (req, res) => {
+router.get('/crearSala', deviceController.checkDevice, (req, res) => {
     res.render('crearSala')
+});
+router.get('/crearSala/:map', deviceController.checkDevice, roomController.crearSala, (req, res) => {
+    res.send(req.params.map)
+});
+router.get('/sala/:room', deviceController.checkDevice, (req, res) => {
+    res.send(req.params.room)
 });
 
 // Rutas POST
