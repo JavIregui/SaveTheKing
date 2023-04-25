@@ -46,14 +46,17 @@ exports.crearSala = (req, res, next) => {
 exports.joinRoom = (req, res) => {
     const code = req.body.roomCode.toUpperCase();
     const roomIndex = salas.map(function(e) { return e.code; }).indexOf(code);
-    if(salas[roomIndex].canBeJoined && salas[roomIndex].members.length < 14 && !salas[roomIndex].members.includes(req.ip)){
-        salas[roomIndex].members.push(req.ip);
-        req.room = salas[roomIndex]
-        res.redirect('/room/' + code)
-        console.log(salas)
-    }
-    else{
-        res.redirect('/lobby')
+    if(roomIndex < 0){
+        res.redirect('lobby')
+    } else {
+        if(salas[roomIndex].canBeJoined && salas[roomIndex].members.length < 14 && !salas[roomIndex].members.includes(req.ip)){
+            salas[roomIndex].members.push(req.ip);
+            req.room = salas[roomIndex]
+            res.redirect('/room/' + code)
+        }
+        else{
+            res.redirect('/lobby')
+        }
     }
 }
 // Buscar sala disponible
@@ -90,5 +93,25 @@ exports.buscarSala = (req, res, next) => {
         salas[roomIndex].members.push(req.ip);
         req.room = salas[roomIndex]
         return next();
+    }
+}
+
+exports.getRoom = (req, res, next) =>{
+    const code = req.params.room;
+    const roomIndex = salas.map(function(e) { return e.code; }).indexOf(code);
+    if(roomIndex < 0){
+        res.redirect('/lobby')
+    }
+    else{
+        req.room = salas[roomIndex];
+        return next();
+    }
+}
+exports.isMember = (req, res, next) =>{
+    if(req.room.members.includes(req.ip)){
+        return next();
+    }
+    else{
+        res.redirect('lobby');
     }
 }

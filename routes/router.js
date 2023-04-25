@@ -28,8 +28,11 @@ router.get('/crearSala', deviceController.checkDevice, (req, res) => {
 router.get('/crearSala/:map', deviceController.checkDevice, roomController.crearSala, (req, res) => {
     res.redirect('/room/' + req.room.code)
 });
-router.get('/room/:room', deviceController.checkDevice,/* GetRoom y IsMember */ (req, res) => {
-    res.send(req.params.room)
+router.get('/room', deviceController.checkDevice, (req, res) => {
+    res.redirect('lobby');
+});
+router.get('/room/:room', deviceController.checkDevice, roomController.getRoom, roomController.isMember, (req, res) => {
+    res.render('sala', {room: req.room})
 });
 
 // Rutas POST
