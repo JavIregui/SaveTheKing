@@ -18,6 +18,10 @@
 </head>
 
 <body>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script>
+        var socket = io();
+    </script>
     <audio src="/resources/audio/music.mp3" loop id="music"></audio>
     <audio src="/resources/audio/hover.mp3" id="hoverSound"></audio>
     <audio src="/resources/audio/spray.mp3" autoplay id="transitionAudio"></audio>
@@ -51,8 +55,8 @@
     <div id="crearSala">
         <img id="logo" src="/resources/img/logoFinal.webp" alt="Logo Save The King">
 
-        <h1> <%= room.code %> </h1>
-        <h1> <%= room.map %> </h1>
+        <h1 style="color: white;"> <%= room.code %> </h1>
+        <h1 style="color: white;"> <%= room.map %> </h1>
     </div>
     
     <div id="mute">
