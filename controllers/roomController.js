@@ -47,6 +47,8 @@ exports.joinRoom = (req, res) => {
     const code = req.body.roomCode.toUpperCase();
     const roomIndex = salas.map(function(e) { return e.code; }).indexOf(code);
     if(salas[roomIndex].canBeJoined && salas[roomIndex].members.length < 14 && !salas[roomIndex].members.includes(req.ip)){
+        salas[roomIndex].members.push(req.ip);
+        req.room = salas[roomIndex]
         res.redirect('/room/' + code)
         console.log(salas)
     }
