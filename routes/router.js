@@ -19,21 +19,21 @@ router.get('/lobby', deviceController.checkDevice, (req, res) => {
 router.get('/mobile', (req, res) => {
     res.render('mobile')
 });
-router.get('/buscarSala', deviceController.checkDevice, (req, res) => {
-    res.send(req.ip)
+router.get('/buscarSala', deviceController.checkDevice, roomController.buscarSala, (req, res) => {
+    res.redirect('/room/' + req.room.code)
 });
 router.get('/crearSala', deviceController.checkDevice, (req, res) => {
     res.render('crearSala')
 });
 router.get('/crearSala/:map', deviceController.checkDevice, roomController.crearSala, (req, res) => {
-    res.send(req.params.map)
+    res.redirect('/room/' + req.room.code)
 });
-router.get('/sala/:room', deviceController.checkDevice, (req, res) => {
+router.get('/room/:room', deviceController.checkDevice,/* GetRoom y IsMember */ (req, res) => {
     res.send(req.params.room)
 });
 
 // Rutas POST
-router.post('/joinRoom', roomController.joinRoom)
+router.post('/joinRoom', deviceController.checkDevice, roomController.joinRoom)
 
 // Exportamos el router
 module.exports = router;
