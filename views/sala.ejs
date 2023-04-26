@@ -15,12 +15,13 @@
     
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script src="/resources/js/soundController.js"></script>
+    <script src="/resources/js/renderer.js"></script>
 </head>
 
 <body>
     <script>
         var socket = io();
-        
+
         socket.emit('join', {room: '<%- room.code %>' });
     </script>
 
@@ -57,7 +58,7 @@
     <div id="crearSala">
         <img id="logo" src="/resources/img/logoFinal.webp" alt="Logo Save The King">
 
-        <h1 style="color: white;"> <%= room.code %> </h1>
+        <h1 style="color: white;" onclick="play()"> <%= room.code %> </h1>
         <h1 style="color: white;"> <%= room.map %> </h1>
     </div>
     

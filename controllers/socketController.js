@@ -21,6 +21,7 @@ exports = module.exports = function(io){
                     roomController.gameRooms[roomIndex].head = roomController.gameRooms[roomIndex].members[0]
                 }
             }
+            console.log(roomController.gameRooms)
         });
     });
 }
