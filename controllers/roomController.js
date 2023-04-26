@@ -1,5 +1,7 @@
 // Lista de Salas
-salas = [];
+var salas = [];
+
+module.exports.gameRooms = salas;
 
 // Generador de códigos
 var chars = '0123456789abcdefghijklmnopqrstuvwxyz';

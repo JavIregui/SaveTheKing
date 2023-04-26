@@ -12,16 +12,18 @@
     <script src="https://kit.fontawesome.com/06ddcb88ee.js" crossorigin="anonymous"></script>
 
     <meta name="description" content="Save the King Game">
-
     
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script src="/resources/js/soundController.js"></script>
 </head>
 
 <body>
-    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script>
         var socket = io();
+        
+        socket.emit('join', {room: '<%- room.code %>' });
     </script>
+
     <audio src="/resources/audio/music.mp3" loop id="music"></audio>
     <audio src="/resources/audio/hover.mp3" id="hoverSound"></audio>
     <audio src="/resources/audio/spray.mp3" autoplay id="transitionAudio"></audio>
